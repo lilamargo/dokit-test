@@ -18,7 +18,7 @@ Dokit Test es una aplicación web diseñada para facilitar el registro y la gest
 
 1. Clona el repositorio de Dokit en tu máquina local.
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/lilamargo/dokit-test.git
 ```
 
 2. Instala los requisitos del proyecto utilizando pip:
