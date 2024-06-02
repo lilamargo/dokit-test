@@ -1,0 +1,32 @@
+<!-- templates/home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dokit</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+            <div class="container">
+                <a href="{% url 'home' %}" class="logo-nav2">
+                    <img src="{% static 'img/logo.svg' %}" alt="Logo" class="logo-nav">
+                </a>
+                <div class="nav-links">
+                    <a href="{% url 'login' %}" class="button-nav">Login</a>
+                    <a href="{% url 'signup' %}" class="button-nav">Sign Up</a>
+                </div>
+            </div>
+    </nav>    
+    <div class="container">
+        <h1 class="title">Welcome To Dokit Test</h1>
+        <p>Dokit is an application for registering doctors and their offices</p>
+        <img src="{% static 'img/home_docs.svg' %}" alt="Docs" style="display: block; margin: 50px auto; width: 40%;">
+        <p>Developed with 💜 by Liliana Martinez.</p>
+    </div>
+</body>
+</html>
+
+

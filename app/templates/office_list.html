@@ -1,0 +1,35 @@
+<!-- dashboard.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'home' %}" class="logo-nav2">
+                <img src="{% static 'img/logo.svg' %}" alt="Logo" class="logo-nav">
+            </a>
+            <div class="nav-links">
+                <a href="{% url 'home' %}" class="button-nav">Home</a>
+            </div>
+        </div>
+    </nav>  
+    <div class="container">
+    <h2>Dashboard</h2>
+    <div class="button-container">
+        <a href="{% url 'dashboard' %}" class="button">List Doctor</a>
+        <a href="{% url 'signup' %}" class="button">Register Doctor</a>
+        <a href="{% url 'create_office' %}" class="button">Register Office</a>
+    </div>
+    <h2>Offices</h2>
+    <ul>
+        {% for office in offices %}
+            <li>{{ office.street }} - {{ office.doctor.email }} <a href="{% url 'update_office' office.id %}" class="boton-action">Edit</a> <a href="{% url 'delete_office' office.id %}" class="boton-action">Delete</a></li>
+        {% endfor %}
+    </ul>
+    </div>
+</body>
+</html>

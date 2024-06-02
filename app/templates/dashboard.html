@@ -1,0 +1,37 @@
+<!-- dashboard.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'home' %}" class="logo-nav2">
+                <img src="{% static 'img/logo.svg' %}" alt="Logo" class="logo-nav">
+            </a>
+            <div class="nav-links">
+                <a href="{% url 'home' %}" class="button-nav">Home</a>
+            </div>
+        </div>
+    </nav>  
+    <div class="container">
+    <h2>Dashboard</h2>
+    <div class="button-container">
+        <a href="{% url 'signup' %}" class="button">Register Doctor</a>
+        <a href="{% url 'create_office' %}" class="button">Register Office</a>
+        <a href="{% url 'office_list' %}" class="button">Office List</a>
+    </div>
+    <div class="main-content">
+        <h2>Doctors</h2>
+        <ul>
+            {% for doctor in doctors %}
+                <li>{{ doctor.names }} {{ doctor.first_lastname }} {{ doctor.second_lastname }} ({{ doctor.email }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</body>
+</html>

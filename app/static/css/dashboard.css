@@ -1,0 +1,115 @@
+* {
+    color: #223188;
+}
+body {
+    background-color: #f3eee9;
+    font-family: 'Figtree', 'Albert Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding-top: 60px; 
+}
+
+.container {
+    text-align: center;
+    margin-top: 55px; 
+}
+
+
+.title {
+    font-size: 40px;
+}
+
+.navbar {
+    background-color: rgb(36, 36, 65);
+    height: 100px;
+    margin: 0 !important;
+    margin-bottom: 20px; 
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    position:fixed;
+}
+
+.navbar .container {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 25px;
+    margin: 0 !important;
+}
+
+.logo-nav {
+    height: 70%;
+}
+.logo-nav2 {
+    margin-top: 15px;
+    height: 80%;
+}
+
+
+.button-nav {
+    font-size: 19px !important;
+    color: white;
+    text-decoration: none; 
+    margin-left: 30px; 
+    font-weight: bold; 
+    transition: all 0.3s ease; 
+}
+
+/* dashboard.css */
+.tables-container {
+    display:inline-table;
+    justify-content: center;
+}
+
+.tables-container table {
+    margin: 0 10px;
+ 
+}
+
+.tables-container .divider {
+    border-right: 3px solid  #6927DA;
+    margin: 0 10px;
+}
+
+.tables-container table th {
+    padding: 30px;
+}
+
+.button {
+    background-color: #7839EE;
+    border: 0;
+    color: white !important;
+    padding: 10px 20px;
+    cursor: pointer;
+    align-self: center;
+    margin: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #6927DA !important;
+}
+
+
+.boton-action {
+ 
+    border: 0;
+    color: #6927DA;
+    padding: 5px 5px;
+    cursor: pointer;
+    align-self: center;
+    margin: 5px;
+    font-weight: 2;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.boton-action:hover {
+    color: #1f0747 !important;
+}
+

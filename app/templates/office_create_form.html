@@ -1,0 +1,31 @@
+<!-- office_create_form.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Office</title>
+    <link rel="stylesheet" href="{% static 'css/office_create.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'home' %}" class="logo-nav2">
+                <img src="{% static 'img/logo.svg' %}" alt="Logo" class="logo-nav">
+            </a>
+            <div class="nav-links">
+                <a href="{% url 'home' %}" class="button-nav">Home</a>
+            </div>
+        </div>
+    </nav>  
+    <div class="container">
+    <h2>Register Office</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+            {{ form.as_p }}
+            </div>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>
